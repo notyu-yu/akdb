@@ -1,12 +1,11 @@
-Python Project: Arknights Database/akdb
+# Python Project: Arknights Database/akdb
 
-Scrapes operator statistics data from the Fandom page for mobile game Arknights.
+Scrapes operator statistics data from the Fandom page for mobile game Arknights.  
 Created as final project for the Python for Everybody course
 
 Required pip modules: sqlite, matplotlib, numpy
 
-
-Scripts:
+## Scripts:
 
 akdb.py: Uses BeatifulSoup to retrieve operator data from Fandom webpages and store them in the akdb.sqlite database
 
@@ -15,7 +14,7 @@ akdb_dump.py: Prints out operator name, rarity, archetype, and tags
 akdb_graph.py: Plot average statistics for each operator class with matplotlib
 
 
-Database Structure:
+## Database Structure:
 
 ak_op: Operators table, contains operator id, name, class id, faction id, archetype id, and statistics at each elite level: Hitpoints/hp, damage/atk, defense/def, resistance/res, redeploy time/redeploy, deployment point cost/dp_cost, block count/block, attack speed/aspd.
 

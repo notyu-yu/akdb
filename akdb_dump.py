@@ -1,4 +1,5 @@
 import sqlite3
+from collections import defaultdict
 
 # Open database file
 conn = sqlite3.connect('akdb.sqlite')
@@ -17,7 +18,15 @@ ak_op.id=tag_relation.op_id AND
 tags.id=tag_relation.tag_id
 ''')
 
+# Dictionary to store operator tags
+op_dict = defaultdict(lambda:[])
+
+# Put each operator tag in dictionary entry
 for row in cur:
-    print(row)
+    op_dict[row[:3]].append(row[3])
+
+# Print out the operator info's
+for key, value in op_dict.items():
+    print("Operator: %s, Rarity: %s, Archetype: %s, " % key + f"Tags:{', '.join(value)}" )
 
 cur.close()

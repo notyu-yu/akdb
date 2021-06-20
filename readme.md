@@ -7,18 +7,18 @@ Required pip modules: sqlite, matplotlib, numpy
 
 ## Scripts:
 
-akdb.py: Uses BeatifulSoup to retrieve operator data from Fandom webpages and store them in the akdb.sqlite database
+akdb.py: Uses BeatifulSoup to retrieve operator data from Fandom webpages and store them in the akdb.sqlite database.
 
-akdb_dump.py: Prints out operator name, rarity, archetype, and tags
+akdb_search.py: Search for operators and print out the operator name, rarity, archetype, and tags if matches are found. Use -h for help, and no arguments to print all operators.
 
-akdb_graph.py: Plot average statistics for each operator class with matplotlib
+akdb_graph.py: Plot average statistics for each operator class with matplotlib.
 
 
 ## Database Structure:
 
 ak_op: Operators table, contains operator id, name, class id, faction id, archetype id, and statistics at each elite level: Hitpoints/hp, damage/atk, defense/def, resistance/res, redeploy time/redeploy, deployment point cost/dp_cost, block count/block, attack speed/aspd.
 
-archetypes: Links each archetype id to a string with the archetype name
+archetypes: Links each archetype id to a string with the archetype name.
 
 classes: Links each class id to a string with class name.
 
